@@ -1,10 +1,7 @@
 package org.PresentList;
 
-
-
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class PresentList {
@@ -16,7 +13,6 @@ public class PresentList {
         Scanner scanner = new Scanner(System.in);
         String present = "";
         String choice;
-
 
         loadFile(presents);
 
@@ -39,12 +35,10 @@ public class PresentList {
             choice = scanner.nextLine();
         } while (choice.equalsIgnoreCase("si"));
 
-        Collections.sort(presents);
-
 
         saveFile(presents);
 
-        System.out.println("Lista dei regali ordinata:");
+        System.out.println("Lista dei regali:");
         for (String regalo : presents) {
             System.out.println(regalo);
         }
